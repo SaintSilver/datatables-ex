@@ -7,3 +7,5 @@
 4. 언어 변경
 5. Column별 검색기능
 6. 약간의 스타일
+
+## [DEMO PAGE IS HERE](https://saintsilver.github.io/datatables-ex/)
