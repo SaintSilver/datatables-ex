@@ -39,8 +39,11 @@ $(document).ready(function () {
     });
 
     /* Column별 검색기능 추가 */
-    $('#myTable_filter').prepend('<select id="select"><option>id</option><option>first_name</option><option>last_name</option><option>email</option><option>gender</option><option>date</option><option>ip_address</option></select>');
-
+    $('#myTable_filter').prepend('<select id="select"></select>');
+    $('#myTable > thead > tr').children().each(function (indexInArray, valueOfElement) { 
+        $('#select').append('<option>'+valueOfElement.innerHTML+'</option>');
+    });
+    
     $('.dataTables_filter input').unbind().bind('keyup', function () {
         var colIndex = document.querySelector('#select').selectedIndex;
         table.column(colIndex).search(this.value).draw();
