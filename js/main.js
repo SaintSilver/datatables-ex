@@ -3,10 +3,12 @@ $(document).ready(function () {
     var table = $('#myTable').DataTable({
         ajax: {
             'url':'MOCK_DATA.json', 
+            //'type': 'POST',
             'dataSrc':''
         },
         responsive: true,
         orderMulti: true,
+        order : [[1, 'desc']],
         columns: [
             {"data": "id"},
             {"data": "first_name"},
@@ -15,7 +17,11 @@ $(document).ready(function () {
             {"data": "gender"}, 
             {"data": "date"},
             {"data": "ip_address",
-                "render": function(data, type){
+                "render": function(data, type, row){
+                    /*
+                     * 다른 column의 값을 다루고 싶을 땐
+                     * row['COLUMN명'] 으로 꺼내쓸 수 있다.
+                     */
                     if(type=='display'){
                         data = '<a href="'+ data + '">' + data + '</a>';
                     }
