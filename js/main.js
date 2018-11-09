@@ -59,6 +59,16 @@ $(document).ready(function () {
                 "next": "다음",
                 "previous": "이전"
             }
+        },
+        /* Footer에 금액총합 구하기,
+         * filtered data 총합만 계산하도록 함.*/
+        "footerCallback":function(){
+            var api = this.api(), data;
+            var result = 0;
+            api.column(7, {search:'applied'}).data().each(function(data,index){
+                result += parseFloat(data);
+            });
+            $(api.column(3).footer()).html(result.toLocaleString()+'원');
         }
     });
 
