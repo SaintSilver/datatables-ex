@@ -50,6 +50,25 @@ table.dataTable.display tbody tr:hover {
     background: #E1F5FE;
 }
 
+/* EXCEL 버튼 */
+#exportCSV{
+	margin-right: 5px;
+	text-align: center;
+	border: 1px solid white;
+	transition: all 0.15s;
+	background-color: #00695C;
+	padding: 5px 3px;
+	color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#exportCSV:hover{
+	background-color: transparent;
+	border: 1px solid gray;
+	color: black;
+}
+
 @media screen and (max-width: 640px) {
 
     /* 검색창, 페이지당 select 등 input 관련 */
