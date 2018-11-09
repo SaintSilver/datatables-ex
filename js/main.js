@@ -42,7 +42,8 @@ $(document).ready(function () {
                         data = '<a href="'+ data + '">' + data + '</a>';
                     }
                     return data;
-                }}
+            }},
+            {"data":"money"}
         ],
         "language": {
             "emptyTable": "데이터가 없어요.",
@@ -73,8 +74,8 @@ $(document).ready(function () {
     });
 
     /* 날짜검색 이벤트 리바인딩 */
-    $('#myTable_filter').prepend('<input type="text" id="toDate" placeholder="yyyy/MM/dd"> ');
-    $('#myTable_filter').prepend('<input type="text" id="fromDate" placeholder="yyyy/MM/dd">~');
+    $('#myTable_filter').prepend('<input type="text" id="toDate" placeholder="yyyy-MM-dd"> ');
+    $('#myTable_filter').prepend('<input type="text" id="fromDate" placeholder="yyyy-MM-dd">~');
     $('#toDate, #fromDate').unbind().bind('keyup',function(){
         table.draw();
     })
