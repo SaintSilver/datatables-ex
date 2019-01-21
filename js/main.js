@@ -73,7 +73,7 @@ $(document).ready(function () {
         dom : 'Blfrtip',
         buttons:[{
 			extend:'csvHtml5',
-			text: 'Excel',
+			text: 'Export CSV',
 			footer: true,
 			bom: true,
 			className: 'exportCSV'
