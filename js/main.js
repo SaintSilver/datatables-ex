@@ -70,13 +70,14 @@ $(document).ready(function () {
             });
             $(api.column(3).footer()).html(result.toLocaleString()+'원');
         },
+        dom : 'Blfrtip',
         buttons:[{
 			extend:'csvHtml5',
 			text: 'Excel',
 			footer: true,
 			bom: true,
-			className: 'exportBtn'
-		}],
+			className: 'exportCSV'
+		}]
     });
 
     /* Column별 검색기능 추가 */
@@ -95,12 +96,6 @@ $(document).ready(function () {
     $('#myTable_filter').prepend('<input type="text" id="fromDate" placeholder="yyyy-MM-dd">~');
     $('#toDate, #fromDate').unbind().bind('keyup',function(){
         table.draw();
-    })
-
-    /* Export 버튼 추가 */
-    $('#myTable_length').prepend('<button type="button" id="exportCSV">Export CSV</button>');
-    $('#exportCSV').on('click',function(){
-    	table.button('.buttons-csv').trigger();
     })
 
 

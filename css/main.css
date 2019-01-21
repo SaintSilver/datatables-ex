@@ -51,7 +51,7 @@ table.dataTable.display tbody tr:hover {
 }
 
 /* EXCEL 버튼 */
-#exportCSV{
+.exportCSV{
 	margin-right: 5px;
 	text-align: center;
 	border: 1px solid white;
@@ -63,7 +63,7 @@ table.dataTable.display tbody tr:hover {
     cursor: pointer;
 }
 
-#exportCSV:hover{
+.exportCSV:hover{
 	background-color: transparent;
 	border: 1px solid gray;
 	color: black;
